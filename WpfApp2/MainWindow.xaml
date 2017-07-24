@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    
+    <DockPanel>
+        <TabControl DockPanel.Dock="Left">
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="First" ></TextBlock>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <local:UserControl1></local:UserControl1>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="Second" ></TextBlock>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="Third" ></TextBlock>
+                </TabItem.Header>
+            </TabItem>
+            <TabControl.Style>
+                <Style TargetType="TabControl">
+                    <Setter Property="TabStripPlacement" Value="Left"></Setter>
+                </Style>
+            </TabControl.Style>
+        </TabControl>
+        <StackPanel DockPanel.Dock="Right">
+            <Button>Option1</Button>
+            <Button>Option2</Button>
+            <Button>Option3</Button>
+        </StackPanel>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Left">
+                <TextBlock>Test1</TextBlock>
+                <TextBlock>Test2</TextBlock>
+                <TextBlock>Test3</TextBlock>
+                <TextBlock>Test4</TextBlock>
+  
+                <local:CustomControl1></local:CustomControl1>
+                <local:CustomControl1></local:CustomControl1>
+                <local:CustomControl1></local:CustomControl1>
+                <DocumentViewer></DocumentViewer>
+
+            </StackPanel>
+        </DockPanel>
+    </DockPanel>
+</Window>
